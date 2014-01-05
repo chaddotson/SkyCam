@@ -82,12 +82,6 @@ function jsonResponse2($param, $print = false, $header = true) {
 
 
 $directory    = 'images\*.jpg';
-//$files1 = scandir("images");
-//$scanned_directory = array_diff(scandir($directory), array('..', '.'));
-//$files2 = scandir($dir, 1);
-
-//print_r(json_encode(glob($directory)));
-//print_r(json_encode($files1));
 
 array_multisort(array_map('filemtime', ($files = glob($directory))), SORT_DESC, $files);
 
@@ -99,7 +93,6 @@ $results = array();
 $id = 0;
 foreach( $listing as &$filename )
 {
-//    printf( "%s %s <br>", date("c", filemtime($filename)), $filename);
     $entry = new StdClass();
     $entry->id = $id;
     $entry->timestamp = date("c", filemtime($filename));
@@ -115,7 +108,5 @@ $myresponse = new StdClass();
 $myresponse->Images=$results;
 
 print_r(json_encode($myresponse));
-
-
 
 ?>
