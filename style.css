@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-/*
+
 button {
 	margin: 0;
 	padding: 0;
@@ -18,9 +18,8 @@ button {
 	-ms-appearance: none;
 	-o-appearance: none;
 	appearance: none;
-}*/
+}
 
-    
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
@@ -72,8 +71,8 @@ body {
 
 }
 
-
-/*#webcamapp:before {
+/*
+#webcamapp:before {
 	content: '';
 	border-left: 1px solid #f5d6d6;
 	border-right: 1px solid #f5d6d6;
@@ -126,8 +125,6 @@ body {
     background: -ms-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-8 */
-
-
 }
 
 
