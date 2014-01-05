@@ -1,5 +1,4 @@
 window.WebCam = Ember.Application.create();
-window.WebCam.Selected = null;
 
 //WebCam.ApplicationAdapter = DS.FixtureAdapter.extend();
 
