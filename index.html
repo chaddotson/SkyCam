@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Estill Springs, TN Sky Cam</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+     <script type="text/x-handlebars" data-template-name="WebCam">
+        <section id="webcamapp">
+          <header id="header">
+            <h1>Estill Springs Sky Cam</h1>
+          </header>
+
+          <section id="main">
+
+            {{#with selectedImage}}
+            
+            <img id="current" {{bindAttr src="file"}} />
+            <h3> {{timestamp}} </h3>  
+            {{/with}}
+
+            <p> This image updates every 15 minutes.</p>
+                
+            <ul id="Image-list">
+                
+            {{#each item in this}}
+                <div>
+                <a href="#"><img {{action "doClick" item}} on="click" {{bindAttr src="item.file"}} /></a>
+
+                </div>
+            {{/each}}
+            <h3> The last 24 hours </h3>        
+            </ul>
+
+                
+          </section>
+
+        </section>
+                
+
+                
+        <footer id="info">
+
+        </footer>
+         
+    </script>
+    
+    <script src="js/libs/jquery-1.10.2.min.js"></script>
+    <script src="js/libs/handlebars-v1.2.0.js"></script>
+    <script src="js/libs/ember-1.2.0-min.js"></script>
+     <script src="js/libs/ember-data-min.js"></script>
+    <!--<script src="js/libs/localstorage_adapter.js"></script> -->
+    
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/models/webcam.js"></script>
+    <script src="js/controllers/webcams_controller.js"></script>
+    <script src="js/controllers/webcam_controller.js"></script>
+    <script src="js/views/webcam_view.js"></script>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-7674223-3', 'cdotson.com');
+        ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
